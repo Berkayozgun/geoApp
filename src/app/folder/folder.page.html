@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>GeoApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-list *ngFor="let tekliData of topluData">
+    <ion-list-header>
+      <ion-label>Your IP address :  {{tekliData.ip}}
+
+        <ion-card><h2>Your Country :   {{tekliData.country_name}}</h2></ion-card>
+          <ion-card><h2>Your Region :    {{tekliData.region_name}}</h2></ion-card>
+          <ion-card><h2>You are in "{{tekliData.time_zone}}"" timezone.</h2></ion-card>
+          <ion-card><h2>Your Coordinates: 
+            Latitude : {{tekliData.latitude}} Longitude : {{tekliData.longitude}}</h2>
+        </ion-card>
+      </ion-label>
+      
+    </ion-list-header>
+  </ion-list>
+
+</ion-content>
